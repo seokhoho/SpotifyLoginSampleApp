@@ -189,7 +189,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="nMw-Fa-O68" eventType="touchUpInside" id="iHG-95-pwf"/>
+                                    <action selector="nextButtonTapped:" destination="nMw-Fa-O68" eventType="touchUpInside" id="xP5-JU-PpD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -219,7 +219,7 @@
         <!--Main View Controller-->
         <scene sceneID="qkh-g4-yI9">
             <objects>
-                <viewController id="G6c-Sr-d00" customClass="MainViewController" customModule="SpotifyLoginSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="G6c-Sr-d00" customClass="MainViewController" customModule="SpotifyLoginSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uCG-nM-laO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
