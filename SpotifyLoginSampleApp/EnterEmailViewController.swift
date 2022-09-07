@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+import Firebase
 
 class EnterEmailViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
