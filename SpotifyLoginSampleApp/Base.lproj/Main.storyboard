@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A3C-Gg-yOa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A3C-Gg-yOa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +37,7 @@
                                 <rect key="frame" x="56.5" y="284.5" width="301" height="191"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.house.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VkJ-sT-RKa">
-                                        <rect key="frame" x="115.5" y="0.0" width="70" height="80"/>
+                                        <rect key="frame" x="115.5" y="-1" width="70" height="80"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="S06-Uy-UB7"/>
@@ -231,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjz-3F-CXe">
-                                <rect key="frame" x="175.5" y="488" width="63" height="34"/>
+                                <rect key="frame" x="175.5" y="539" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" systemColor="systemGray6Color"/>
@@ -240,17 +241,30 @@
                                     <action selector="logoutButtonTapped:" destination="G6c-Sr-d00" eventType="touchUpInside" id="3gN-jx-hKr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X7-mM-NbL">
+                                <rect key="frame" x="157" y="488" width="100.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="G6c-Sr-d00" eventType="touchUpInside" id="uR9-OX-WRK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p7f-Vx-4J6"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hjz-3F-CXe" firstAttribute="top" secondItem="o0d-r6-Q1f" secondAttribute="bottom" constant="20" id="LzU-ce-yVC"/>
+                            <constraint firstItem="0X7-mM-NbL" firstAttribute="centerX" secondItem="p7f-Vx-4J6" secondAttribute="centerX" id="97c-2c-PsV"/>
+                            <constraint firstItem="0X7-mM-NbL" firstAttribute="top" secondItem="o0d-r6-Q1f" secondAttribute="bottom" constant="20" id="Acy-Js-sYC"/>
                             <constraint firstItem="o0d-r6-Q1f" firstAttribute="centerY" secondItem="p7f-Vx-4J6" secondAttribute="centerY" id="dPl-vi-RfL"/>
+                            <constraint firstItem="hjz-3F-CXe" firstAttribute="top" secondItem="0X7-mM-NbL" secondAttribute="bottom" constant="20" id="gZc-qC-piA"/>
                             <constraint firstItem="hjz-3F-CXe" firstAttribute="centerX" secondItem="p7f-Vx-4J6" secondAttribute="centerX" id="qon-tI-dug"/>
                             <constraint firstItem="o0d-r6-Q1f" firstAttribute="centerX" secondItem="p7f-Vx-4J6" secondAttribute="centerX" id="zDP-VL-9wk"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="0X7-mM-NbL" id="ram-W0-WiX"/>
                         <outlet property="welcomeLabel" destination="o0d-r6-Q1f" id="3Av-Pv-WSK"/>
                     </connections>
                 </viewController>
